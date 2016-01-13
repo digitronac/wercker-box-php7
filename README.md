@@ -1,1 +1,1 @@
-# wercker-php7-nginx-box
+# wercker-box-php7
