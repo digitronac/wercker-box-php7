@@ -1,5 +1,5 @@
 name: php7
-version: 1.0.2
+version: 1.0.3
 #inherits: ondrapelech/ubuntu-15.04@0.0.7
 inherits: nytame/ubuntu-14.04-ansible@0.0.2
 type: main
@@ -34,7 +34,6 @@ script: |
   sudo apt-get -y install php-redis
   sudo apt-get -y install php-curl
 
-  #sudo apt-get -y install php7.0-redis
   php -v
   php -m
 
