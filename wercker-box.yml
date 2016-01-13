@@ -1,0 +1,40 @@
+name: php7
+version: 1.0.2
+#inherits: ondrapelech/ubuntu-15.04@0.0.7
+inherits: nytame/ubuntu-14.04-ansible@0.0.2
+type: main
+platform: ubuntu@12.04
+description: wercker box for php7
+keywords:
+  - php7-cli
+  - php7-fpm
+  - mysql
+  - redis
+  - memcached
+  - pear
+  - apcu
+  - curl
+services:
+  - wercker/mysql@1.0.1
+  - wercker/redis@1.0.1
+script: | 
+  sudo apt-get update
+  sudo apt-get upgrade
+  sudo apt-get -y install curl
+  echo '\n' | sudo add-apt-repository ppa:ondrej/php-7.0
+  sudo apt-get update
+  sudo apt-get -y install php7.0-fpm
+  sudo apt-get -y install php7.0-cli
+  sudo apt-get -y install php7.0-mysql
+  sudo apt-get -y install memcached
+
+  sudo apt-get -y install php-memcached
+  sudo apt-get -y install php-pear
+  sudo apt-get -y install php-apcu
+  sudo apt-get -y install php-redis
+  sudo apt-get -y install php-curl
+
+  #sudo apt-get -y install php7.0-redis
+  php -v
+  php -m
+
