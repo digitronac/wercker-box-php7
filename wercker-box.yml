@@ -1,5 +1,5 @@
 name: php7
-version: 1.0.4
+version: 1.0.5
 #inherits: ondrapelech/ubuntu-15.04@0.0.7
 inherits: nytame/ubuntu-14.04-ansible@0.0.2
 type: main
@@ -15,12 +15,14 @@ keywords:
   - apcu
   - curl
   - intl
+  - git
 services:
   - wercker/mysql@1.0.1
   - wercker/redis@1.0.1
 script: | 
   sudo apt-get update
   sudo apt-get upgrade
+  sudo apt-get -y install git
   sudo apt-get -y install curl
   echo '\n' | sudo add-apt-repository ppa:ondrej/php-7.0
   sudo apt-get update
