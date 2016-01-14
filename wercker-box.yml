@@ -1,5 +1,5 @@
 name: php7
-version: 1.0.5
+version: 1.0.6
 #inherits: ondrapelech/ubuntu-15.04@0.0.7
 inherits: nytame/ubuntu-14.04-ansible@0.0.2
 type: main
@@ -38,6 +38,7 @@ script: |
   sudo apt-get -y install php-curl
   sudo apt-get -y install php-intl
   sudo apt-get -y install php-imagick
+  sudo apt-get -y install php-xdebug
 
   php -v
   php -m
