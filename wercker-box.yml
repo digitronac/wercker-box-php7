@@ -1,19 +1,20 @@
 name: php7
-version: 1.0.3
+version: 1.0.4
 #inherits: ondrapelech/ubuntu-15.04@0.0.7
 inherits: nytame/ubuntu-14.04-ansible@0.0.2
 type: main
 platform: ubuntu@12.04
 description: wercker box for php7
 keywords:
-  - php7-cli
-  - php7-fpm
+  - php7
   - mysql
+  - imagick
   - redis
   - memcached
   - pear
   - apcu
   - curl
+  - intl
 services:
   - wercker/mysql@1.0.1
   - wercker/redis@1.0.1
@@ -33,6 +34,8 @@ script: |
   sudo apt-get -y install php-apcu
   sudo apt-get -y install php-redis
   sudo apt-get -y install php-curl
+  sudo apt-get -y install php-intl
+  sudo apt-get -y install php-imagick
 
   php -v
   php -m
